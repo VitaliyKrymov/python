@@ -66,7 +66,7 @@
 # print(func_return_max(l))
 
 # - створити функцію яка повертає найменьше число з ліста
-l = [1, 2, 4, 56, -7]
+# l = [1, 2, 4, 56, -7]
 # def func_return_min(l):
 #     return min(l)
 #
@@ -89,37 +89,84 @@ l = [1, 2, 4, 56, -7]
 #
 # ################################################################################################
 # 1)Дан list:
-list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+list = [22, 3, 5, 2, 8, 2,23, 8, 23, 5]
 
 
 #   - знайти мін число
-# def func_min(list):
-#     print(min(list))
+def func_min(list):
+    res = min(list)
+    print(res)
+    return res
+
+
 #
-# func_min(list)
+#func_min(list)
+
+
 #   - видалити усі дублікати
-# def func_dubl(list):
-#     res=set(list)
-#     return res
-#
-# print(func_dubl(list))
+def func_dubl(list):
+    res = set(list)
+    print(res)
+    return res
+
+
+#print(func_dubl(list))
+
+
 #   - замінити кожне 4-те значення на 'X'
-# def func_swap_x(list):
-#     print(['X' if not((i+1)%4) else v for i,v in enumerate(list)])
-#
-#
-# func_swap_x(list)
+def func_swap_x(list):
+    print(['X' if not ((i + 1) % 4) else v for i, v in enumerate(list)])
+
+
+func_swap_x(list)
+
+
 # 2) вивести на екран пустий квадрат з "*" сторона якого вказана як агрумент функції
-# def func_squre(a):
-#     for i in range(a):
-#         if i == 0 or i == a - 1:
-#             print("*" * a)
-#         else:
-#             print('*' + " " * (a - 2) + '*')
-#
-#
-# func_squre(50)
+def func_squre(a):
+    for i in range(a):
+        if i == 0 or i == a - 1:
+            print("*" * a)
+        else:
+            print('*' + " " * (a - 2) + '*')
+
+
+#func_squre(50)
+
 
 # 3) вывести табличку множення за допомогою цикла while
+def multi_table():
+    i = 1
+    while i < 10:
+        j = 1
+        while j < 10:
+            res = i * j
+            print(f'{res:3}', end='')
+            j += 1
+        print(end='\n')
+        i += 1
+
+
+multi_table()
 
 # 4) переробити це завдання під меню
+while True:
+    print('1) func_min')
+    print('2) func_dubl')
+    print('3) func_swap_x')
+    print('4) func_squre')
+    print('5) multi_table')
+    print('0) EXIT')
+
+    choice = input('Make your choice')
+    if choice == '1':
+        func_min(list)
+    elif choice == '2':
+        func_dubl(list)
+    elif choice == '3':
+        func_swap_x(list)
+    elif choice == '4':
+        func_squre(9)
+    elif choice == "5":
+        multi_table()
+    elif choice == '0':
+        break
