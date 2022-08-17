@@ -1,6 +1,5 @@
 # from typing import Callable
 #
-#
 # # def notebook() -> tuple[Callable[[str], None], Callable[[], list[str]]]:
 # def notebook():
 #     todo_list: list[str] = []
