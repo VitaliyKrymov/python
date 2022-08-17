@@ -5,9 +5,9 @@
 # def notebook():
 #     todo_list: list[str] = []
 #
-#     def add_todo(todo: str) -> None:
+#     def add_todo(to_do: str) -> None:
 #         nonlocal todo_list
-#         todo_list.append(todo)
+#         todo_list.append(to_do)
 #
 #     def get_all() -> list[str]:
 #         nonlocal todo_list
@@ -32,7 +32,6 @@
 #
 #
 # print(expanded_form(50555))
-
 
 def decor(func):
     count = 1
