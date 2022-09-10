@@ -1,0 +1,25 @@
+db.teacher.find()
+
+db.teacher.aggregate([
+    {
+        $group:{
+            _id:'$lesson',
+            countOfTeater:{$sum:1},
+            min:{$min:'$payment'},
+            max:{$max:'$payment'},
+            avg:{$avg:'$payment'},
+            sum:{$sum:'$payment'}
+
+        }
+    }]
+
+    )
+
+db.teacher.aggregate([
+    {
+        $group:{
+            _id:'$lesson',
+            count:{$sum:1}
+        }
+    }
+])
